@@ -203,6 +203,62 @@
                     padding: 2px 5px;
                     pointer-events: none;
                 }
+
+
+                /* --- TUTORIAL FOOTER --- */
+                #tutorial-footer {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+                    padding: 15px 0 10px 0;
+                    display: flex;
+                    justify_content: center;
+                    gap: 30px;
+                    z-index: 200;
+                    pointer-events: none;
+                    /* Để không che mất thao tác nếu có */
+                    font-family: 'Cinzel', serif;
+                }
+
+                .tutorial-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                    color: #d4af37;
+                    /* Màu vàng kim loại giống theme */
+                    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+                    opacity: 0.8;
+                    transition: opacity 0.3s;
+                }
+
+                .tutorial-item:hover {
+                    opacity: 1;
+                }
+
+                .t-icon {
+                    font-size: 24px;
+                    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+                }
+
+                .t-text {
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                /* Ẩn trên màn hình quá nhỏ nếu cần */
+                @media (max-width: 400px) {
+                    #tutorial-footer {
+                        gap: 15px;
+                    }
+
+                    .t-text {
+                        font-size: 8px;
+                    }
+                }
             </style>
 
             <style>
@@ -231,6 +287,21 @@
 
     <div id="ui-layer">
         <h1>Chúng mình iu nhau 1 năm rùi đóoo</h1>
+    </div>
+
+    <div id="tutorial-footer">
+        <div class="tutorial-item">
+            <span class="t-icon">✋</span>
+            <span class="t-text">Xòe tay: Xem Cây</span>
+        </div>
+        <div class="tutorial-item">
+            <span class="t-icon">👌</span>
+            <span class="t-text">Chụm ngón: Xem Ảnh</span>
+        </div>
+        <div class="tutorial-item">
+            <span class="t-icon">🫶</span>
+            <span class="t-text">Chữ C: Bắn Tim</span>
+        </div>
     </div>
 
     <div id="webcam-wrapper">
